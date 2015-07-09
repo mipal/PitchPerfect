@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         //TODO: Show text "recording in progress"
         //TODO: Record the user's coice
         println("pressed record button")
+        
     }
 }
 
