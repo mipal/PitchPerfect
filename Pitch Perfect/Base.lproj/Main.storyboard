@@ -25,22 +25,40 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5L4-T5-qZI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB8-0i-PhO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.25490196079999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="P6Q-zc-d4U" secondAttribute="centerY" id="4lA-1Z-EHy"/>
+                            <constraint firstAttribute="centerX" secondItem="NB8-0i-PhO" secondAttribute="centerX" constant="-0.5" id="DMC-km-KdM"/>
+                            <constraint firstItem="NB8-0i-PhO" firstAttribute="top" secondItem="P6Q-zc-d4U" secondAttribute="bottom" constant="8" id="LDf-po-NNY"/>
                             <constraint firstAttribute="centerX" secondItem="P6Q-zc-d4U" secondAttribute="centerX" id="SsV-V3-zZ0"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NB8-0i-PhO"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="4lA-1Z-EHy"/>
                                 <exclude reference="SsV-V3-zZ0"/>
+                                <exclude reference="DMC-km-KdM"/>
+                                <exclude reference="LDf-po-NNY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NB8-0i-PhO"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="4lA-1Z-EHy"/>
                                 <include reference="SsV-V3-zZ0"/>
+                                <include reference="DMC-km-KdM"/>
+                                <include reference="LDf-po-NNY"/>
                             </mask>
                         </variation>
                     </view>
