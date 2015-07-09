@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6Q-zc-d4U">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6Q-zc-d4U">
                                 <rect key="frame" x="250" y="285" width="100" height="30"/>
                                 <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,10 +44,10 @@
                                 <exclude reference="NB8-0i-PhO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4lA-1Z-EHy"/>
-                                <exclude reference="SsV-V3-zZ0"/>
                                 <exclude reference="DMC-km-KdM"/>
                                 <exclude reference="LDf-po-NNY"/>
+                                <exclude reference="4lA-1Z-EHy"/>
+                                <exclude reference="SsV-V3-zZ0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -55,10 +55,10 @@
                                 <include reference="NB8-0i-PhO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4lA-1Z-EHy"/>
-                                <include reference="SsV-V3-zZ0"/>
                                 <include reference="DMC-km-KdM"/>
                                 <include reference="LDf-po-NNY"/>
+                                <include reference="4lA-1Z-EHy"/>
+                                <include reference="SsV-V3-zZ0"/>
                             </mask>
                         </variation>
                     </view>
