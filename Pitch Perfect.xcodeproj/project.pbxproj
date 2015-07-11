@@ -15,6 +15,7 @@
 		4C55321D1B4EFB9D00849ECF /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55321C1B4EFB9D00849ECF /* Pitch_PerfectTests.swift */; };
 		4C5532271B51B6FB00849ECF /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5532261B51B6FB00849ECF /* PlaySoundsViewController.swift */; };
 		4C5532291B51B91400849ECF /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C5532281B51B91400849ECF /* movie_quote.mp3 */; };
+		4C55322B1B51CB2100849ECF /* RecorderAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C55322A1B51CB2100849ECF /* RecorderAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4C55321C1B4EFB9D00849ECF /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		4C5532261B51B6FB00849ECF /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		4C5532281B51B91400849ECF /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
+		4C55322A1B51CB2100849ECF /* RecorderAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				4C5532061B4EFB9D00849ECF /* AppDelegate.swift */,
 				4C5532081B4EFB9D00849ECF /* RecordSoundsViewController.swift */,
+				4C55322A1B51CB2100849ECF /* RecorderAudio.swift */,
 				4C55320A1B4EFB9D00849ECF /* Main.storyboard */,
 				4C5532261B51B6FB00849ECF /* PlaySoundsViewController.swift */,
 				4C55320D1B4EFB9D00849ECF /* Images.xcassets */,
@@ -221,6 +224,7 @@
 			files = (
 				4C5532091B4EFB9D00849ECF /* RecordSoundsViewController.swift in Sources */,
 				4C5532271B51B6FB00849ECF /* PlaySoundsViewController.swift in Sources */,
+				4C55322B1B51CB2100849ECF /* RecorderAudio.swift in Sources */,
 				4C5532071B4EFB9D00849ECF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

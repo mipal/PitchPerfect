@@ -39,7 +39,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedStopButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZGa-0l-IT6"/>
-                                    <segue destination="UXD-hC-Ihm" kind="show" id="Fnh-4G-Eip"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,8 +82,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="xPx-WS-wlF"/>
                     <connections>
+                        <outlet property="recordButton" destination="P6Q-zc-d4U" id="g8U-Qq-SP9"/>
                         <outlet property="recordingLabel" destination="NB8-0i-PhO" id="l26-Us-nsE"/>
                         <outlet property="stopButton" destination="wbo-Zi-sVx" id="qoi-Sg-CSy"/>
+                        <segue destination="UXD-hC-Ihm" kind="show" identifier="stopRecordingSegue" id="9KU-Aw-XKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -129,6 +130,24 @@
                                     <action selector="pressedStop:" destination="UXD-hC-Ihm" eventType="touchUpInside" id="tij-I5-Mji"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-da-8wc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedChipmunk:" destination="UXD-hC-Ihm" eventType="touchUpInside" id="1Ae-Tb-KKD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCr-Jf-DSg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Vader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedVader:" destination="UXD-hC-Ihm" eventType="touchUpInside" id="tkc-lw-tft"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,20 +155,30 @@
                             <constraint firstItem="kpY-5L-NnE" firstAttribute="top" secondItem="dUt-G2-rbL" secondAttribute="bottom" constant="50" id="B2w-LZ-xCZ"/>
                             <constraint firstItem="OjF-J3-i2h" firstAttribute="leading" secondItem="y8L-6S-KFQ" secondAttribute="leadingMargin" constant="30" id="L4B-Ja-8sv"/>
                             <constraint firstAttribute="centerX" secondItem="LYZ-9S-WN4" secondAttribute="centerX" id="SOo-cj-abC"/>
+                            <constraint firstItem="iMb-da-8wc" firstAttribute="leading" secondItem="y8L-6S-KFQ" secondAttribute="leadingMargin" constant="30" id="XqU-3Y-yV2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bCr-Jf-DSg" secondAttribute="trailing" constant="30" id="YvJ-uB-bzf"/>
                             <constraint firstItem="2xL-6P-6xq" firstAttribute="top" secondItem="LYZ-9S-WN4" secondAttribute="bottom" constant="26" id="ZmO-sc-zIu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kpY-5L-NnE" secondAttribute="trailing" constant="30" id="j4z-CW-oxa"/>
+                            <constraint firstItem="OjF-J3-i2h" firstAttribute="top" secondItem="iMb-da-8wc" secondAttribute="top" constant="-180" id="ntP-9a-QiP"/>
+                            <constraint firstItem="bCr-Jf-DSg" firstAttribute="top" secondItem="kpY-5L-NnE" secondAttribute="bottom" constant="80" id="rUW-OD-lGs"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="OjF-J3-i2h"/>
                                 <exclude reference="kpY-5L-NnE"/>
                                 <exclude reference="LYZ-9S-WN4"/>
+                                <exclude reference="iMb-da-8wc"/>
+                                <exclude reference="bCr-Jf-DSg"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7Dd-my-5tZ"/>
                                 <exclude reference="L4B-Ja-8sv"/>
+                                <exclude reference="ntP-9a-QiP"/>
                                 <exclude reference="B2w-LZ-xCZ"/>
                                 <exclude reference="j4z-CW-oxa"/>
+                                <exclude reference="XqU-3Y-yV2"/>
+                                <exclude reference="YvJ-uB-bzf"/>
+                                <exclude reference="rUW-OD-lGs"/>
                                 <exclude reference="SOo-cj-abC"/>
                                 <exclude reference="ZmO-sc-zIu"/>
                             </mask>
@@ -159,12 +188,18 @@
                                 <include reference="OjF-J3-i2h"/>
                                 <include reference="kpY-5L-NnE"/>
                                 <include reference="LYZ-9S-WN4"/>
+                                <include reference="iMb-da-8wc"/>
+                                <include reference="bCr-Jf-DSg"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7Dd-my-5tZ"/>
                                 <include reference="L4B-Ja-8sv"/>
+                                <include reference="ntP-9a-QiP"/>
                                 <include reference="B2w-LZ-xCZ"/>
                                 <include reference="j4z-CW-oxa"/>
+                                <include reference="XqU-3Y-yV2"/>
+                                <include reference="YvJ-uB-bzf"/>
+                                <include reference="rUW-OD-lGs"/>
                                 <include reference="SOo-cj-abC"/>
                                 <include reference="ZmO-sc-zIu"/>
                             </mask>
@@ -195,6 +230,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Vader" width="100" height="100"/>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
