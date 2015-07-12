@@ -44,7 +44,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: - Actions
 
     @IBAction func recordAudio(sender: UIButton) {
-        recordingLabel.hidden = false
+        recordingLabel.text = "Recording"
         stopButton.hidden = false
         recordButton.enabled = false
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
@@ -73,17 +73,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func pressedStopButton(sender: AnyObject) {
         audioRecorder.stop()
         AVAudioSession.sharedInstance().setActive(false, error: nil)
-        recordingLabel.hidden = true
+        recordingLabel.text = "Tap to record"
+        recordButton.enabled = true
     }
     
     // MARK: - AVAudioRecorderDelegate
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         
         if(flag) {
-            recorderAudio = RecorderAudio()
-            recorderAudio.filePathUrl = recorder.url;
-            recorderAudio.title = recorder.url.lastPathComponent
-            
+            recorderAudio = RecorderAudio(filePath: recorder.url, title: recorder.url.lastPathComponent!)            
             performSegueWithIdentifier("stopRecordingSegue", sender: recorderAudio)
         }
     }
